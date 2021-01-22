@@ -9,5 +9,5 @@ RUN git clone --depth 1 https://github.com/mc1arke/sonarqube-community-branch-pl
 
 FROM sonarqube:7.9.2-community
 
-COPY --from=build plugin.jar  /opt/sonarqube/extensions/plugins/
-COPY --from=build plugin.jar /opt/sonarqube/lib/common/
+COPY --from=build plugin.jar  /opt/sonarqube/extensions/plugins/sonarqube-community-branch-plugin.jar
+COPY --from=build plugin.jar /opt/sonarqube/lib/common/sonarqube-community-branch-plugin.jar
